@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LanchesApp.Telas.LancheDetailsPage"
+             Title="{Binding Nome}">
+    <StackLayout Padding="10">
+        <Image Source="{Binding ImagemUrl}" HeightRequest="100" WidthRequest="100"/>
+        <TableView>
+            <TableRoot>
+                <TableSection Title="Acréscimos">
+                    <SwitchCell Text="{Binding TextoMaionese}" On="{Binding TemMaionese, Mode=TwoWay}"></SwitchCell>
+                    <SwitchCell Text="{Binding TextoBacon}" On="{Binding TemBacon, Mode=TwoWay}"></SwitchCell>
+                    <SwitchCell Text="{Binding TextoOvo}" On="{Binding TemOvo, Mode=TwoWay}"></SwitchCell>
+                    <SwitchCell Text="{Binding TextoCheddar}" On="{Binding TemCheddar, Mode=TwoWay}"></SwitchCell>
+                    <SwitchCell Text="{Binding TextoCatupiry}" On="{Binding TemCatupiry, Mode=TwoWay}"></SwitchCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+        <Button x:Name="btnProximo" Text="Próximo" Clicked="btnProximo_Clicked" VerticalOptions="End"
+                TextColor="White" BackgroundColor="Green" FontAttributes="Bold"></Button>
+    </StackLayout>
+
+</ContentPage>
